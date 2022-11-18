@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import './leagues.pages.scss';
+import LeagueComponent from "../components/league.component";
 
 const Leagues = () => {
 
@@ -30,10 +31,7 @@ const Leagues = () => {
         <div className="leagues-container">
             {
                 datas.map((data) => (
-                    <div key = {data.league.id} className = "league-div">
-                        <img src = {data.league.logo} alt="#"/>
-                        <h1>{data.league.name}</h1>
-                    </div>
+                    <LeagueComponent key = {data.league.id} data = {data}/>
                 ))
             }
         </div>
