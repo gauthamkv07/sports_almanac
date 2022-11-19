@@ -4,28 +4,28 @@ import './table.component.scss';
 const TableComponent = ({ datas }) => {
     return (
         <div className="league-table">
-            <div className="league-table-head">
-                <span className="pos">pos</span>
-                <span className="team">Team</span>
-                <span className="wld">Win</span>
-                <span className="wld">Loss</span>
-                <span className="wld">Draw</span>
-            </div>
-            <div className="league-content">
+            <table className="league-table-header">
+                <tr className="league-table-head">
+                    <th className="pos">pos</th>
+                    <th className="team">Team</th>
+                    <th className="wld">Win</th>
+                    <th className="wld">Loss</th>
+                    <th className="wld">Draw</th>
+                </tr>
                 {
                     datas.map((data) => (
                         data.map((sd) => (
-                            <div style={{ background: sd.rank % 2 == 0 ? 'grey' : 'white' }} className = "league-row" key={sd.id}>
-                                <span className="pos">{sd.rank}</span>
-                                <span className="team">{sd.team.name}</span>
-                                <span className="wld">{sd.all.win}</span>
-                                <span className="wld">{sd.all.lose}</span>
-                                <span className="wld">{sd.all.draw}</span>
-                            </div>
+                            <tr className="league-row" key={sd.id}>
+                                <td className="pos">{sd.rank}</td>
+                                <td className="team">{sd.team.name}</td>
+                                <td className="wld">{sd.all.win}</td>
+                                <td className="wld">{sd.all.lose}</td>
+                                <td className="wld">{sd.all.draw}</td>
+                            </tr>
                         ))
                     ))
                 }
-            </div>
+            </table>
         </div>
     )
 }
