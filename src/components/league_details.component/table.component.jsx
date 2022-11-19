@@ -1,7 +1,11 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import './table.component.scss';
 
+
+
 const TableComponent = ({ datas }) => {
+    let navigate = useNavigate();
     return (
         <div className="league-table">
             <table className="league-table-header">
@@ -15,7 +19,8 @@ const TableComponent = ({ datas }) => {
                 {
                     datas.map((data) => (
                         data.map((sd) => (
-                            <tr className="league-row" key={sd.id}>
+                            <tr className="league-row" key={sd.team.id} 
+                                onClick={()=> {navigate('/teamDetails', {state: {id: sd.team.id, name: sd.team.name, logo: sd.team.logo}})}}>
                                 <td className="pos">{sd.rank}</td>
                                 <td className="team">{sd.team.name}</td>
                                 <td className="wld">{sd.all.win}</td>
