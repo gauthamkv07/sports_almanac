@@ -1,0 +1,50 @@
+.league-table {
+    background-color: white;
+    width: 30vh;
+}
+
+.league-table-head {
+    display: flex;
+    background-color: 'grey';
+    flex-direction: row;
+    font-weight: bold;
+
+    .pos {
+        width: 40px;
+        margin-left: 5px;
+        text-align: left;
+    }
+
+    .team {
+        width: 200px;
+        display: flex;
+        text-align: left;
+    }
+
+    .wld {
+        width: 50px;
+        text-align: left;
+    }
+}
+
+.league-row {
+    display: flex;
+    flex-direction: row;
+
+    .pos {
+        width: 40px;
+        margin-left: 5px;
+        text-align: left;
+    }
+
+    .team {
+        width: 200px;
+        display: flex;
+        text-align: left;
+    }
+
+    .wld {
+        width: 50px;
+        text-align: left;
+    }
+}
