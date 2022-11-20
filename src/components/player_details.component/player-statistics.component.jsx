@@ -9,7 +9,7 @@ const PlayerStatisticsComponent = ({ datas }) => {
             <h3>CLUB</h3>
             {
                 datas.map((data) => (<div>
-                    <Stats data={data} />
+                    {data.games.appearences?<Stats data={data} />:null}
                 </div>))
             }
         </div>
