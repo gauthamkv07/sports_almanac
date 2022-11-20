@@ -31,7 +31,7 @@ const TeamDetailPage = () => {
     return (
         <div className="team-page">
             {teamData == null ? <div>Loading...</div> : 
-                <div>
+                <div className="team-align">
                     <TeamLogo logo = {state.logo} name = {state.name}/>
                     <PlayerListComponent datas = {teamData}/>
                 </div>
