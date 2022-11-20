@@ -1,6 +1,6 @@
 .league-table {
     background-color: white;
-    width: 40.6vh;
+    margin-right: 20vh;
 
 
     .league-table-header {
@@ -13,18 +13,18 @@
         .league-table-head {
             display: flex;
             flex-direction: row;
-            height: 40px;
+            height: 3.3vh;
             justify-content: center;
             align-items: center;
 
             .team {
-                width: 200px;
+                width: 25vh;
                 display: flex;
                 text-align: left;
             }
 
             .wld {
-                width: 50px;
+                width: 5vh;
                 text-align: center;
             }
         }
@@ -36,24 +36,26 @@
 .league-row {
     display: flex;
     flex-direction: row;
-    height: 40px;
+    height: 3.3vh;
     justify-content: center;
     align-items: center;
 
     .team {
-        width: 200px;
+        width: 25vh;
         display: flex;
         text-align: left;
         cursor: pointer;
+        align-items: center;
 
         .image {
-            height: 20px;
-            width: 20px;
+            height:30px;
+            width: 30px;
+            align-items: center;
         }
     }
 
     .wld {
-        width: 50px;
+        width: 5vh;
         text-align: center;
     }
 }
