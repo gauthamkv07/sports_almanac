@@ -1,0 +1,16 @@
+.fixtures-list {
+    height: 100vh;
+    width: 80vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.fixtures{
+    height: 100vh;
+    position: absolute;
+    overflow: scroll;
+
+    &::-webkit-scrollbar{
+        display: none;
+    }
+}

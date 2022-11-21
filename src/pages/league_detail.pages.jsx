@@ -22,7 +22,6 @@ const LeagueDetail = () => {
 
         axios.request(options).then(function (response) {
             setLeagueData(response.data.response[0])
-            console.log(response)
         }).catch(function (error) {
             console.error(error);
         });
@@ -33,7 +32,7 @@ const LeagueDetail = () => {
             <div className="league-detail">
                 <div className="league-align">
                     <LogoComponent data={leagueData} />
-                    <TableComponent className = "points-table" datas={leagueData.league.standings} />
+                    <TableComponent className = "points-table" datas={leagueData.league.standings} id = {state.id} />
                 </div>
             </div>}</div>
 

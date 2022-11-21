@@ -4,7 +4,7 @@ import './table.component.scss';
 
 
 
-const TableComponent = ({ datas }) => {
+const TableComponent = ({ datas, id }) => {
     let navigate = useNavigate();
     return (
         <div className="league-table">
@@ -22,9 +22,9 @@ const TableComponent = ({ datas }) => {
                 {
                     datas.map((data) => (
                         data.map((sd) => (
-                            <tr className="league-row" key={sd.team.id} 
-                                onClick={()=> {navigate('/teamDetails', {state: {id: sd.team.id, name: sd.team.name, logo: sd.team.logo}})}}>
-                                <td className="team"><span><img  className = "image" src={sd.team.logo} alt="#" /></span>{sd.team.name}</td>
+                            <tr className="league-row" key={sd.team.id}
+                                onClick={() => { navigate('/teamDetails', { state: { id: sd.team.id, name: sd.team.name, logo: sd.team.logo, leagueid: id } }) }}>
+                                <td className="team"><span><img className="image" src={sd.team.logo} alt="#" /></span>{sd.team.name}</td>
                                 <td className="wld">{sd.all.win}</td>
                                 <td className="wld">{sd.all.lose}</td>
                                 <td className="wld">{sd.all.draw}</td>

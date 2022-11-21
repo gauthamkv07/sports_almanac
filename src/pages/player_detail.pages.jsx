@@ -24,7 +24,6 @@ const PlayerDetailPage = () => {
 
         axios.request(options).then(function (response) {
             setData(response.data.response)
-            console.log(datas)
         }).catch(function (error) {
             console.error(error);
         });

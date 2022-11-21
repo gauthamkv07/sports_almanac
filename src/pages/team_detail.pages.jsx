@@ -4,6 +4,7 @@ import './team_detail.pages.scss';
 import axios from "axios";
 import TeamLogo from "../components/team_details.component/team_logo.component.jsx";
 import PlayerListComponent from "../components/team_details.component/player_list.component";
+import TeamFixtures from "../components/team_details.component/team_fixtures.component";
 
 const TeamDetailPage = () => {
     const [teamData, setTeamData] = useState(null)
@@ -29,13 +30,18 @@ const TeamDetailPage = () => {
     }, [])
 
     return (
-        <div className="team-page">
-            {teamData == null ? <div>Loading...</div> : 
-                <div className="team-align">
-                    <TeamLogo logo = {state.logo} name = {state.name}/>
-                    <PlayerListComponent datas = {teamData}/>
-                </div>
-            }
+        <div>
+            {/* <TeamLogo logo={state.logo} name={state.name} /> */}
+            <div className="team-page">
+                {teamData == null ? <div>Loading...</div> :
+                    <div className="team-align">
+                        <div>
+                            <TeamFixtures id={state.id} leagueid={state.leagueid} />
+                        </div>
+                        <PlayerListComponent datas={teamData} />
+                    </div>
+                }
+            </div>
         </div>
     )
 }
