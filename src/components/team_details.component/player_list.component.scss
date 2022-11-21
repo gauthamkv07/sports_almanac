@@ -1,13 +1,18 @@
 .player-detail-container {
+    height: 90vh;
     width: 50%;
     background-color: #8082DD;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    justify-content: center;
+    justify-content: start;
     text-align: center;
-    
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     .player-image {
-        // margin: 20px;
         cursor: pointer;
     }
 }

@@ -1,0 +1,23 @@
+.fixture-row {
+    display: flex;
+    flex-direction: row;
+    height: 3.3vh;
+    justify-content: center;
+    align-items: center;
+
+    .played-against {
+        width: 25vh;
+        display: flex;
+        text-align: left;
+    }
+
+    .score {
+        width: 10vh;
+        text-align: center;
+    }
+
+    .time {
+        width: 20vh;
+        text-align: center;
+    }
+}

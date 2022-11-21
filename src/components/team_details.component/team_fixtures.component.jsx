@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import './team_fixtures.component.scss';
 import axios from "axios";
-import FixturesComponent from "./fixtures.component";
+import FixturesTableComponent from "./fixture_results.component/fixtures_table.component";
 
 const TeamFixtures = ({ id, leagueid }) => {
     const [team, setTeam] = useState(null)
@@ -29,9 +29,9 @@ const TeamFixtures = ({ id, leagueid }) => {
     }, [])
 
     return (<div className="fixtures-list">
-        {datas == null ? <div>hi</div> : <div className="fixtures">{
-            datas.map((data) => (<FixturesComponent key = {data.fixture.id} data={data} team = {team.toString()}/>))
-        }</div>}
+        {datas == null ? <div>hi</div> : <div className="fixtures">
+            <FixturesTableComponent datas={datas} team={team.toString()} />
+        </div>}
     </div>)
 }
 

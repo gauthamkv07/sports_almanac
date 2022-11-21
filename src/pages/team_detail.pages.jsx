@@ -30,9 +30,9 @@ const TeamDetailPage = () => {
     }, [])
 
     return (
-        <div>
-            {/* <TeamLogo logo={state.logo} name={state.name} /> */}
-            <div className="team-page">
+        <div className="team-page">
+            <TeamLogo logo={state.logo} name={state.name} />
+            <div className="team-data">
                 {teamData == null ? <div>Loading...</div> :
                     <div className="team-align">
                         <div>

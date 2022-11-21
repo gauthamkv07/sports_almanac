@@ -1,14 +1,18 @@
 .team-page {
-    height: 100vh;
-    width: 100%;
     background-color: #8082DD;
-
-    .team-align {
-        height: 100%;
+    height: 100vh;
+    overflow: hidden;
+    
+    .team-data {
+        height: 90vh;
         width: 100%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
+
+        .team-align {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+        }
     }
 }
