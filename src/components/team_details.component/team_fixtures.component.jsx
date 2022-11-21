@@ -14,7 +14,7 @@ const TeamFixtures = ({ id, leagueid }) => {
         }).catch(function (error) {
             console.error(error);
         });
-    }, [])
+    }, [id, leagueid])
 
     return (<div className="fixtures-list">
         {datas == null ? <div>hi</div> : <div className="fixtures">

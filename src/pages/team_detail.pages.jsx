@@ -16,7 +16,7 @@ const TeamDetailPage = () => {
         }).catch(function (error) {
             console.error(error);
         });
-    }, [])
+    }, [state.id])
 
     return (
         <div className="team-page">

@@ -15,7 +15,7 @@ const LeagueDetail = () => {
         }).catch(function (error) {
             console.error(error);
         });
-    }, [])
+    }, [state.id])
 
     return <div>{
         leagueData == null ? <div>loading</div> :

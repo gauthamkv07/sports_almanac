@@ -16,7 +16,7 @@ const PlayerDetailPage = () => {
         }).catch(function (error) {
             console.error(error);
         });
-    }, [])
+    }, [state.id])
 
     return (
         <div>{
