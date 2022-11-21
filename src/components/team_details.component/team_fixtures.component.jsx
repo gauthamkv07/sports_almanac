@@ -4,6 +4,7 @@ import axios from "axios";
 import FixturesComponent from "./fixtures.component";
 
 const TeamFixtures = ({ id, leagueid }) => {
+    const [team, setTeam] = useState(null)
     const [datas, setData] = useState(null)
 
     useEffect(() => {
@@ -19,8 +20,9 @@ const TeamFixtures = ({ id, leagueid }) => {
         };
 
         axios.request(options).then(function (response) {
+            setTeam(response.data.parameters.team)
             setData(response.data.response)
-            console.log(response.data.response)
+            console.log(response.data)
         }).catch(function (error) {
             console.error(error);
         });
@@ -28,7 +30,7 @@ const TeamFixtures = ({ id, leagueid }) => {
 
     return (<div className="fixtures-list">
         {datas == null ? <div>hi</div> : <div className="fixtures">{
-            datas.map((data) => (<FixturesComponent key = {data.fixture.id} data={data} />))
+            datas.map((data) => (<FixturesComponent key = {data.fixture.id} data={data} team = {team.toString()}/>))
         }</div>}
     </div>)
 }
