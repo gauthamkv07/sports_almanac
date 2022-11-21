@@ -1,8 +1,23 @@
 .leagues-container {
-    width: 100%;
+    height: 100vh;
+    overflow: hidden;
     background-color: #8082DD;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
-    text-align: center;
+
+    .leagues-title{
+        height: 5vh;
+    }
+
+    .leagues-tiles {
+        height: 95vh;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-content: center;
+        text-align: center;
+        overflow: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
 }

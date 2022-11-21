@@ -22,7 +22,6 @@ const TeamFixtures = ({ id, leagueid }) => {
         axios.request(options).then(function (response) {
             setTeam(response.data.parameters.team)
             setData(response.data.response)
-            console.log(response.data)
         }).catch(function (error) {
             console.error(error);
         });

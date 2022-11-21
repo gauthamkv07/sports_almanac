@@ -11,7 +11,7 @@ const Leagues = () => {
         const options = {
             method: 'GET',
             url: 'https://api-football-v1.p.rapidapi.com/v3/leagues',
-            params: { country: 'England' },
+            params: { country: 'England'},
             headers: {
                 'X-RapidAPI-Key': '92ec2310a4mshff3d44ae1f7662ap127a45jsn83ef4fcbd902',
                 'X-RapidAPI-Host': 'api-football-v1.p.rapidapi.com'
@@ -27,11 +27,14 @@ const Leagues = () => {
 
     return (
         <div className="leagues-container">
-            {
-                datas.map((data) => (
-                    <LeagueComponent key = {data.league.id} data = {data}/>
-                ))
-            }
+            <h1 className="leagues-title">Sports Almanac</h1>
+            <div className="leagues-tiles">
+                {
+                    datas.map((data) => (
+                        <LeagueComponent key={data.league.id} data={data} />
+                    ))
+                }
+            </div>
         </div>
     )
 
