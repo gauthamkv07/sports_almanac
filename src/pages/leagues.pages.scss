@@ -1,17 +1,25 @@
 .leagues-container {
     height: 100vh;
     overflow: hidden;
-    background-color: #8082DD;
+    display: flex;
+    flex-direction: column;
 
-    .leagues-title{
-        height: 5vh;
+    .leagues-title {
+        height: 10vh;
+        display: flex;
+        background-color: #8082DD;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+        font-size: 30px;
     }
 
     .leagues-tiles {
-        height: 95vh;
+        height: 90vh;
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         justify-content: center;
         text-align: center;
         overflow: scroll;

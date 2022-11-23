@@ -15,7 +15,7 @@ const FixturesTableComponent = ({ datas, team }) => {
                 </tr>
             </thead>
             <tbody>
-                {datas.filter((data) => data.fixture.status.long == "Match Finished").map((data) => (<FixturesResultsComponent key={data.fixture.id} data={data} team={team.toString()} />))}
+                {datas.filter((data) => data.fixture.status.long === "Match Finished").map((data) => (<FixturesResultsComponent key={data.fixture.id} data={data} team={team.toString()} />))}
             </tbody>
         </table>
     </div>)

@@ -12,18 +12,18 @@ const Leagues = () => {
         }).catch(function (error) {
             console.error(error);
         });
-    }, [])
+    }, [datas])
 
     return (
         <div className="leagues-container">
-            <h1 className="leagues-title">Sports Almanac</h1>
-            <div className="leagues-tiles">
+            <div className="leagues-title">Sports Almanac</div>
+            {datas == null ? <div>Loading...</div> : <div className="leagues-tiles">
                 {
                     datas.map((data) => (
                         <LeagueComponent key={data.league.id} data={data} />
                     ))
                 }
-            </div>
+            </div>}
         </div>
     )
 

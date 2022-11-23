@@ -18,7 +18,7 @@ const TeamDetailPage = () => {
         }).catch(function (error) {
             console.error(error);
         });
-    }, [state.id])
+    }, [state.id, teamData, status])
 
     function updateStatus(newStatus) {
         console.log(newStatus);
