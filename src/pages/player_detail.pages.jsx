@@ -20,7 +20,7 @@ const PlayerDetailPage = () => {
 
     return (
         <div>{
-            datas == null ? <div>Loading...</div> :
+            datas === null ? <div>Loading...</div> :
                 <div>
                     <div className="player-detail">
                         <PlayerDetailsComponent data={datas[0]} />

@@ -10,11 +10,27 @@ const LeagueDetail = () => {
     const { state } = useLocation();
 
     useEffect(() => {
-        apiService.getStandingsbyLeagueid(state.id).then(function (response) {
-            setLeagueData(response.data.response[0])
-        }).catch(function (error) {
-            console.error(error);
-        });
+        const leagueid = localStorage.getItem("leagueid");
+        const localLeagueData = localStorage.getItem("leagueData")
+
+        const fetchData = async () => {
+            try {
+                apiService.getStandingsbyLeagueid(state.id).then(function (response) {
+                    setLeagueData(response.data.response[0])
+                    localStorage.setItem("leagueData", JSON.stringify(response.data.response[0]))
+                    localStorage.setItem("leagueid", state.id)
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            } catch (err) {
+                // Handle Error
+            }
+        };
+        if (leagueid !== state.id.toString()) {
+            fetchData();
+        } else {
+            setLeagueData(JSON.parse(localLeagueData));
+        }
     }, [state.id])
 
     return <div>{

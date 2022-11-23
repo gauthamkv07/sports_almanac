@@ -8,7 +8,7 @@ const PlayerListComponent = ({ datas }) => {
     return (<div className="player-detail-container">
         {
             datas.map((data) => (
-                <div className = "player-image" onClick={() => { navigate('/playerDetails', { state: { id: data.player.id } }) }}>
+                <div key = {data.player.id} className = "player-image" onClick={() => { navigate('/playerDetails', { state: { id: data.player.id } }) }}>
                     <div><img src={data.player.photo} alt="#" height='200px' width='200px' /></div>
                     <div><p>{data.player.firstname}{" "}{data.player.lastname}</p></div>
                 </div>

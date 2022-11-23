@@ -7,12 +7,25 @@ const Leagues = () => {
     const [datas, setData] = useState([])
 
     useEffect(() => {
-        apiService.getLeagueData().then(function (response) {
-            setData(response.data.response)
-        }).catch(function (error) {
-            console.error(error);
-        });
-    }, [datas])
+        const storedData = localStorage.getItem("datas");
+        const fetchData = async () => {
+            try {
+                apiService.getLeagueData().then(function (response) {
+                    setData(response.data.response)
+                    localStorage.setItem("datas", JSON.stringify(response.data.response))
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            } catch (err) {
+                console.error(err);
+            }
+        };
+        if (!storedData) {
+            fetchData();
+        } else {
+            setData(JSON.parse(storedData))
+        }
+    }, [])
 
     return (
         <div className="leagues-container">

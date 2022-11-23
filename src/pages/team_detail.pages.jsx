@@ -13,16 +13,35 @@ const TeamDetailPage = () => {
     const [status, setStatus] = useState('results')
 
     useEffect(() => {
-        apiService.getTeamPlayerStatsbyTeamid(state.id).then(function (response) {
-            setTeamData(response.data.response);
-        }).catch(function (error) {
-            console.error(error);
-        });
-    }, [state.id, teamData, status])
+        const localTeamData = localStorage.getItem("teamData");
+        const teamId = localStorage.getItem("teamId");
+        const localStatus = localStorage.getItem("status");
+
+        const fetchData = async () => {
+            try {
+                apiService.getTeamPlayerStatsbyTeamid(state.id).then(function (response) {
+                    setTeamData(response.data.response);
+                    localStorage.setItem("teamData", JSON.stringify(response.data.response))
+                    localStorage.setItem("status", JSON.stringify(status))
+                    localStorage.setItem("teamId", JSON.stringify(state.id))
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            } catch (err) {
+                // Handle Error
+            }
+        };
+        if (teamId !== state.id.toString()) {
+            fetchData();
+        } else {
+            setTeamData(JSON.parse(localTeamData))
+            setStatus(JSON.parse(localStatus))
+        }
+    }, [state.id, status])
 
     function updateStatus(newStatus) {
-        console.log(newStatus);
         setStatus(newStatus);
+        localStorage.setItem("status", JSON.stringify(newStatus))
     }
 
     return (
