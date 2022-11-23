@@ -5,10 +5,12 @@ import TeamLogo from "../components/team_details.component/team_logo.component.j
 import PlayerListComponent from "../components/team_details.component/player_list.component";
 import TeamFixtures from "../components/team_details.component/team_fixtures.component";
 import apiService from "../service/apiService";
+import StatusBar from "../components/team_details.component/status_bars.component/status_bars.component";
 
 const TeamDetailPage = () => {
     const [teamData, setTeamData] = useState(null)
     const { state } = useLocation();
+    const [status, setStatus] = useState('results')
 
     useEffect(() => {
         apiService.getTeamPlayerStatsbyTeamid(state.id).then(function (response) {
@@ -18,16 +20,28 @@ const TeamDetailPage = () => {
         });
     }, [state.id])
 
+    function updateStatus(newStatus) {
+        console.log(newStatus);
+        setStatus(newStatus);
+    }
+
     return (
         <div className="team-page">
-            <TeamLogo logo={state.logo} name={state.name} />
+            <div className="team-status">
+                <TeamLogo logo={state.logo} name={state.name} />
+                <StatusBar status={status} handleClick={updateStatus} />
+            </div>
             <div className="team-data">
                 {teamData == null ? <div>Loading...</div> :
                     <div className="team-align">
-                        <div>
-                            <TeamFixtures id={state.id} leagueid={state.leagueid} />
-                        </div>
-                        <PlayerListComponent datas={teamData} />
+                        {
+                            {
+                                'results': <div>
+                                    <TeamFixtures id={state.id} leagueid={state.leagueid} />
+                                </div>,
+                                'standings': <PlayerListComponent datas={teamData} />
+                            }[status]
+                        }
                     </div>
                 }
             </div>

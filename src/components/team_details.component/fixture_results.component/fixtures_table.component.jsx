@@ -7,12 +7,16 @@ const FixturesTableComponent = ({ datas, team }) => {
 
     return (<div>
         <table className="fixture-table">
-            <tr className="fixture-table-head">
-                <th className="played-against">Played against</th>
-                <th className="score">Score</th>
-                <th className="time">Time</th>
-            </tr>
-            {datas.filter((data) => data.fixture.status.long == "Match Finished").map((data) => (<FixturesResultsComponent key={data.fixture.id} data={data} team={team.toString()} />))}
+            <thead>
+                <tr className="fixture-table-head">
+                    <th className="played-against">Played against</th>
+                    <th className="score">Score</th>
+                    <th className="time">Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                {datas.filter((data) => data.fixture.status.long == "Match Finished").map((data) => (<FixturesResultsComponent key={data.fixture.id} data={data} team={team.toString()} />))}
+            </tbody>
         </table>
     </div>)
 }
