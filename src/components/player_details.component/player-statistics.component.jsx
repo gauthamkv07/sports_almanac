@@ -8,8 +8,8 @@ const PlayerStatisticsComponent = ({ datas }) => {
             <h3><u>Statistics</u></h3>
             <h3>CLUB</h3>
             {
-                datas.map((data) => (<div>
-                    {data.games.appearences?<Stats key = {data.league.name} data={data} />:null}
+                datas.map((data) => (<div key = {data.league.name}>
+                    {data.games.appearences?<Stats data={data} />:null}
                 </div>))
             }
         </div>

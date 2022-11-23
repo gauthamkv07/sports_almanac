@@ -11,11 +11,26 @@ const PlayerDetailPage = () => {
     const [datas, setData] = useState(null)
 
     useEffect(() => {
-        apiService.getPlayerStatsbyPlayerid(state.id).then(function (response) {
-            setData(response.data.response)
-        }).catch(function (error) {
-            console.error(error);
-        });
+        const storedData = localStorage.getItem("playerData");
+        const playerId = localStorage.getItem("playerId");
+        const fetchData = async () => {
+            try {
+                apiService.getPlayerStatsbyPlayerid(state.id).then(function (response) {
+                    setData(response.data.response)
+                    localStorage.setItem("playerData", JSON.stringify(response.data.response))
+                    localStorage.setItem("playerId", JSON.stringify(state.id))
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            } catch (err) {
+                // Handle Error
+            }
+        };
+        if (playerId !== state.id.toString()) {
+            fetchData();
+        } else {
+            setData(JSON.parse(storedData))
+        }
     }, [state.id])
 
     return (
