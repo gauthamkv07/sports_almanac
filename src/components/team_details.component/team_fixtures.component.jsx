@@ -8,12 +8,30 @@ const TeamFixtures = ({ id, leagueid }) => {
     const [datas, setData] = useState(null)
 
     useEffect(() => {
-        apiService.getFixturesbyTeamid(id, leagueid).then(function (response) {
-            setTeam(response.data.parameters.team)
-            setData(response.data.response)
-        }).catch(function (error) {
-            console.error(error);
-        });
+        const localTeamFixturesData = localStorage.getItem("teamFixturesData");
+        const teamId = localStorage.getItem("teamId");
+        const localTeam = localStorage.getItem("team");
+
+        const fetchData = async () => {
+            try {
+                apiService.getFixturesbyTeamid(id, leagueid).then(function (response) {
+                    setTeam(response.data.parameters.team)
+                    localStorage.setItem("team", JSON.stringify(response.data.parameters.team))
+                    setData(response.data.response)
+                    localStorage.setItem("teamFixturesData", JSON.stringify(response.data.response))
+                }).catch(function (error) {
+                    console.error(error);
+                });
+            } catch (err) {
+                // Handle Error
+            }
+        };
+        if (teamId !== id.toString()) {
+            fetchData();
+        } else {
+            setData(JSON.parse(localTeamFixturesData))
+            setTeam(JSON.parse(localTeam))
+        }
     }, [id, leagueid])
 
     return (<div className="fixtures-list">

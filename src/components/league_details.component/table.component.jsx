@@ -6,6 +6,12 @@ import './table.component.scss';
 
 const TableComponent = ({ datas, id }) => {
     let navigate = useNavigate();
+
+    function navToTeamDetailPage(sid, name, logo, leagueid) {
+        navigate('/teamDetails', { state: { id: sid, name: name, logo: logo, leagueid: leagueid } });
+        localStorage.removeItem("teamId");
+    }
+
     return (
         <div className="league-table">
             <table className="league-table-header">
@@ -26,7 +32,7 @@ const TableComponent = ({ datas, id }) => {
                         datas.map((data) => (
                             data.map((sd) => (
                                 <tr className="league-row" key={sd.team.id}
-                                    onClick={() => { navigate('/teamDetails', { state: { id: sd.team.id, name: sd.team.name, logo: sd.team.logo, leagueid: id } }) }}>
+                                    onClick={() => {navToTeamDetailPage(sd.team.id, sd.team.name, sd.team.logo, id)}}>
                                     <td className="team"><span><img className="image" src={sd.team.logo} alt="#" /></span>{sd.team.name}</td>
                                     <td className="wld">{sd.all.win}</td>
                                     <td className="wld">{sd.all.lose}</td>
