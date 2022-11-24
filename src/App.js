@@ -4,10 +4,12 @@ import { Routes, Route } from 'react-router-dom';
 import LeagueDetail from './pages/league_detail.pages';
 import TeamDetailPage from './pages/team_detail.pages';
 import PlayerDetailPage from './pages/player_detail.pages';
+import Title from './components/title.component/title.component';
 
 function App() {
   return (
     <div className="App">
+      <Title/>
       <Routes>
         <Route path='/' element={<Leagues />} />
         <Route exact path='/leagueDetails' element={<LeagueDetail />} />

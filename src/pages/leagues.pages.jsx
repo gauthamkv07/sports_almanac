@@ -29,7 +29,7 @@ const Leagues = () => {
 
     return (
         <div className="leagues-container">
-            <div className="leagues-title">Sports Almanac</div>
+            {/* <div className="leagues-title">Sports Almanac</div> */}
             {datas == null ? <div>Loading...</div> : <div className="leagues-tiles">
                 {
                     datas.map((data) => (

@@ -1,11 +1,16 @@
 .league-div {
     margin: 20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
 
     &:hover {
         transform: scale(1.1);
+        background-color: lightgrey;
     }
 
     &.img {
+        height: 100px;
         width: 250px;
     }
 }

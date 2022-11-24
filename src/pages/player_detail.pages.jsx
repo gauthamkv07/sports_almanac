@@ -4,6 +4,7 @@ import './player_detail.pages.scss';
 import PlayerDetailsComponent from "../components/player_details.component/players-details.component";
 import PlayerStatisticsComponent from "../components/player_details.component/player-statistics.component";
 import apiService from "../service/apiService";
+import PlayerTitle from "../components/player_details.component/player-title.component";
 
 const PlayerDetailPage = () => {
     const { state } = useLocation();
@@ -37,6 +38,7 @@ const PlayerDetailPage = () => {
         <div>{
             datas === null ? <div>Loading...</div> :
                 <div>
+                    <PlayerTitle data={datas[0]}/>
                     <div className="player-detail">
                         <PlayerDetailsComponent data={datas[0]} />
                         <PlayerStatisticsComponent datas={datas[0].statistics} />
