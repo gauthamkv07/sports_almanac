@@ -7,6 +7,7 @@ const Leagues = () => {
     const [datas, setData] = useState([])
 
     useEffect(() => {
+        window.onbeforeunload = () => {localStorage.removeItem("datas")}
         const storedData = localStorage.getItem("datas");
         const fetchData = async () => {
             try {

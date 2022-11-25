@@ -11,6 +11,7 @@ const PlayerDetailPage = () => {
     const [datas, setData] = useState(null)
 
     useEffect(() => {
+        window.onbeforeunload = () => {localStorage.removeItem("playerId")}
         const storedData = localStorage.getItem("playerData");
         const playerId = localStorage.getItem("playerId");
         const fetchData = async () => {

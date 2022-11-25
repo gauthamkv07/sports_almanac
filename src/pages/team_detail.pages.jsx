@@ -13,6 +13,7 @@ const TeamDetailPage = () => {
     const [status, setStatus] = useState('results')
 
     useEffect(() => {
+        window.onbeforeunload = () => {setTeamData(null); fetchData()}
         const localTeamData = localStorage.getItem("teamData");
         const teamId = localStorage.getItem("teamId");
         const localStatus = localStorage.getItem("status");
