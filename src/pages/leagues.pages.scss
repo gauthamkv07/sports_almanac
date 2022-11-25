@@ -1,11 +1,14 @@
 .leagues-container {
     height: 100vh;
+    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    align-items: center;
 
     .leagues-title {
         height: 10vh;
+        width: 100%;
         display: flex;
         background-color: #8082DD;
         color: white;
@@ -15,17 +18,10 @@
         font-size: 30px;
     }
 
-    .leagues-tiles {
+    .league-tile-conatiner {
         height: 90vh;
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: center;
-        text-align: center;
-        overflow: scroll;
-
-        &::-webkit-scrollbar {
-            display: none;
-        }
+        width: 90vh;
+        border-left: solid 1px #e9eaeb;
+        border-right: solid 1px #e9eaeb;
     }
 }

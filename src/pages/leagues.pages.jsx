@@ -30,7 +30,7 @@ const Leagues = () => {
     return (
         <div className="leagues-container">
             <div className="leagues-title">Sports Almanac</div>
-            {datas == null ? <div>Loading...</div> : <LeagueListComponent datas={datas} />}
+            {datas == null ? <div>Loading...</div> : <div className="league-tile-conatiner"><LeagueListComponent datas={datas} /></div>}
         </div>
     )
 

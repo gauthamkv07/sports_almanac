@@ -13,9 +13,9 @@ const PlayerListComponent = ({ datas }) => {
     return (<div className="player-detail-container">
         {
             datas.map((data) => (
-                <div key={data.player.id} className="player-image" onClick={() => { navigateToPlayerDetailPage(data.player.id) }}>
-                    <div><img src={data.player.photo} alt="#" height='200px' width='200px' /></div>
-                    <div><p>{data.player.firstname}{" "}{data.player.lastname}</p></div>
+                <div key={data.player.id} className="player-div" onClick={() => { navigateToPlayerDetailPage(data.player.id) }}>
+                    <div className="player-image-holder"><img className="player-image" src={data.player.photo} alt="#" /></div>
+                    <div className="player-name">{data.player.firstname}{" "}{data.player.lastname}</div>
                 </div>
             ))
         }

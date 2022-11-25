@@ -12,8 +12,8 @@ const LeagueComponent = ({ data }) => {
 
     return (
         <div className="league-div" onClick={() => { navigateToLeagueDetailPage(data.league.id) }}>
-            <img src={data.league.logo} alt="#" />
-            <h1>{data.league.name}</h1>
+            <div className="league-image-holder"><img className="league-image" src={data.league.logo} alt="#" /></div>
+            <div className="league-name">{data.league.name}</div>
         </div>
     )
 }

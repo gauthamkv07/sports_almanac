@@ -1,6 +1,5 @@
 .team-page {
     height: 100vh;
-    width: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -13,8 +12,9 @@
 
     .team-data {
         height: 80vh;
-        width: 100%;
         display: flex;
         justify-content: center;
+        border-left: solid 1px black;
+        border-right: solid 1px black;
     }
 }

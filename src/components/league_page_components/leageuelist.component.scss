@@ -1,9 +1,7 @@
 .leagues-tiles {
-    height: 90vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
+    width: 90vh;
+    display: flex;
+    flex-wrap: wrap;
     text-align: center;
     overflow: scroll;
 
