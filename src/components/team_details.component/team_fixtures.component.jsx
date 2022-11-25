@@ -11,7 +11,6 @@ const TeamFixtures = ({ id, leagueid }) => {
         const localTeamFixturesData = localStorage.getItem("teamFixturesData");
         const teamId = localStorage.getItem("teamIdResult");
         const localTeam = localStorage.getItem("team");
-        console.log(teamId + " " + id.toString())
 
         const fetchData = async () => {
             try {

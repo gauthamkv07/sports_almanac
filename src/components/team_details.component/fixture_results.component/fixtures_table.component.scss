@@ -2,20 +2,14 @@
     background-color: white;
     border-collapse: collapse;
 
-    tr:nth-child(odd) {
-        background-color: #f1f1f1;
-    }
-
+    
     .fixture-table-head {
-        display: flex;
-        flex-direction: row;
-        height: 3.3vh;
+        height: 4vh;
         justify-content: center;
         align-items: center;
 
         .played-against {
             width: 25vh;
-            display: flex;
             text-align: left;
         }
 

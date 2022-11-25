@@ -43,7 +43,6 @@ const TeamDetailPage = () => {
         setStatus(newStatus);
         localStorage.setItem("status", JSON.stringify(newStatus))
     }
-
     return (
         <div className="team-page">
             <div className="team-status">
