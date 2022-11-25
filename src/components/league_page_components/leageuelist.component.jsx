@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './leageuelist.component.scss';
 import LeagueComponent from "./league.component";
 
@@ -9,10 +9,9 @@ const LeagueListComponent = ({ datas }) => {
         "Non League Div One - Isthmian South Central", "Non League Div One - Northern West",
         "Non League Div One - Northern Midlands"])
 
-        // .filter((data) => list.has(data.league.name))
     return (<div className="leagues-tiles">
         {
-            datas.map((data) => (
+            datas.filter((data) => list.has(data.league.name)).map((data) => (
                 <LeagueComponent key={data.league.id} data={data} />
             ))
         }
