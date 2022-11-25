@@ -9,8 +9,9 @@ const TeamFixtures = ({ id, leagueid }) => {
 
     useEffect(() => {
         const localTeamFixturesData = localStorage.getItem("teamFixturesData");
-        const teamId = localStorage.getItem("teamId");
+        const teamId = localStorage.getItem("teamIdResult");
         const localTeam = localStorage.getItem("team");
+        console.log(teamId + " " + id.toString())
 
         const fetchData = async () => {
             try {
@@ -19,6 +20,7 @@ const TeamFixtures = ({ id, leagueid }) => {
                     localStorage.setItem("team", JSON.stringify(response.data.parameters.team))
                     setData(response.data.response)
                     localStorage.setItem("teamFixturesData", JSON.stringify(response.data.response))
+                    localStorage.setItem("teamIdResult", JSON.stringify(id))
                 }).catch(function (error) {
                     console.error(error);
                 });
