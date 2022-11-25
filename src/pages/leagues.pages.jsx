@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import './leagues.pages.scss';
-import LeagueComponent from "../components/league_page_components/league.component";
+import LeagueListComponent from "../components/league_page_components/leageuelist.component";
 import apiService from "../service/apiService";
 
 const Leagues = () => {
@@ -30,13 +30,7 @@ const Leagues = () => {
     return (
         <div className="leagues-container">
             <div className="leagues-title">Sports Almanac</div>
-            {datas == null ? <div>Loading...</div> : <div className="leagues-tiles">
-                {
-                    datas.map((data) => (
-                        <LeagueComponent key={data.league.id} data={data} />
-                    ))
-                }
-            </div>}
+            {datas == null ? <div>Loading...</div> : <LeagueListComponent datas={datas} />}
         </div>
     )
 

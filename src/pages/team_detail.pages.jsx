@@ -58,7 +58,7 @@ const TeamDetailPage = () => {
                                 'results': <div>
                                     <TeamFixtures id={state.id} leagueid={state.leagueid} />
                                 </div>,
-                                'standings': <PlayerListComponent datas={teamData} />
+                                'players': <PlayerListComponent datas={teamData} />
                             }[status]
                         }
                     </div>

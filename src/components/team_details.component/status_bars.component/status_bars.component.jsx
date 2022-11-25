@@ -7,7 +7,7 @@ const StatusBar = ({ status, handleClick }) => {
     return (
         <div className="status-bar">
             <StatusTab cname={status === "results" ? "hg" : ""} status="results" handleClick={handleClick}>Results</StatusTab>
-            <StatusTab cname={status === "standings" ? "hg" : ""} status="standings" handleClick={handleClick}>Standings</StatusTab>
+            <StatusTab cname={status === "players" ? "hg" : ""} status="players" handleClick={handleClick}>Players</StatusTab>
         </div>
     )
 }

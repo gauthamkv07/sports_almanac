@@ -1,0 +1,13 @@
+.leagues-tiles {
+    height: 90vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    text-align: center;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
