@@ -1,9 +1,11 @@
 .logo-div {
     height: 10vh;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    background-color: #8082DD;
 
     .logo-image {
         height: 60px;

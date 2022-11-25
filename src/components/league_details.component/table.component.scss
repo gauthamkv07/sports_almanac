@@ -1,23 +1,18 @@
 .league-table {
     background-color: white;
 
-
     .league-table-header {
         border-collapse: collapse;
-
-        tr:nth-child(odd) {
-            background-color: #f1f1f1;
-        }
 
         .league-table-head {
             display: flex;
             flex-direction: row;
-            height: 3.3vh;
+            height: 4vh;
             justify-content: center;
             align-items: center;
 
             .team {
-                width: 25vh;
+                width: 50vh;
                 display: flex;
                 text-align: left;
             }
@@ -31,30 +26,45 @@
 }
 
 
-
 .league-row {
     display: flex;
     flex-direction: row;
-    height: 3.3vh;
+    height: 4.25vh;
     justify-content: center;
     align-items: center;
+    border-bottom: lightgrey;
+    border-bottom-style: solid ;
+    border-width: 0.1px;
+    width: 90vh;
+
+    &:hover {
+        background-color: #f8f8fd;
+    }
 
     .team {
-        width: 25vh;
+        width: 50vh;
         display: flex;
         text-align: left;
         cursor: pointer;
-        align-items: center;
+        text-align: left;
 
         .image {
-            height:30px;
-            width: 30px;
+            height:25px;
+            width: 25px;
             align-items: center;
+            margin-right: 1rem;
         }
     }
 
     .wld {
         width: 5vh;
         text-align: center;
+    }
+
+    .img-txt{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
     }
 }

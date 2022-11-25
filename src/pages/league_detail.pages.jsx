@@ -37,10 +37,8 @@ const LeagueDetail = () => {
     return <div>{
         leagueData == null ? <div>loading</div> :
             <div className="league-detail">
-                <div className="league-align">
                     <LogoComponent data={leagueData} />
                     <TableComponent className="points-table" datas={leagueData.league.standings} id={state.id} />
-                </div>
             </div>}</div>
 
 }

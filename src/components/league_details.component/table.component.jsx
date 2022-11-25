@@ -33,7 +33,12 @@ const TableComponent = ({ datas, id }) => {
                             data.map((sd) => (
                                 <tr className="league-row" key={sd.team.id}
                                     onClick={() => {navToTeamDetailPage(sd.team.id, sd.team.name, sd.team.logo, id)}}>
-                                    <td className="team"><span><img className="image" src={sd.team.logo} alt="#" /></span>{sd.team.name}</td>
+                                    <td className="team">
+                                        <div className="img-txt">
+                                            <div><img className="image" src={sd.team.logo} alt="#" /></div>
+                                            <div>{sd.team.name}</div>
+                                        </div>
+                                    </td>
                                     <td className="wld">{sd.all.win}</td>
                                     <td className="wld">{sd.all.lose}</td>
                                     <td className="wld">{sd.all.draw}</td>
