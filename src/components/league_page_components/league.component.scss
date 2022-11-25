@@ -21,13 +21,18 @@
         align-items: center;
 
         .league-image {
-            height: 10vh;
-            width: 10vh;
+            height: 17vh;
+            width: 17vh;
         }
     }
 
     .league-name {
-        font-size: 20px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        margin: 5px;
         font-weight: 500;
     }
 }

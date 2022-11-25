@@ -1,5 +1,10 @@
 .league-table {
     background-color: white;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 
     .league-table-header {
         border-collapse: collapse;
