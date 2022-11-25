@@ -1,7 +1,10 @@
 .leagues-tiles {
+    height: 90vh;
     width: 90vh;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     overflow: scroll;
 

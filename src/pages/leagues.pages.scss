@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #f8f9fd;
 
     .leagues-title {
         height: 10vh;
@@ -21,7 +22,6 @@
     .league-tile-conatiner {
         height: 90vh;
         width: 90vh;
-        border-left: solid 1px #e9eaeb;
-        border-right: solid 1px #e9eaeb;
+        background-color: white;
     }
 }

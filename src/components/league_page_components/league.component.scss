@@ -1,22 +1,28 @@
 .league-div {
     height: 200px;
-    width: 186px;
-    margin: 10px 10px;
+    width: 28vh;
+    margin: 7px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
 
+    &:hover{
+        background-color: #f8f8fd;
+    }
+
     .league-image-holder {
         height: 170px;
-        width: 180px;
+        width: 20vh;
         display: flex;
         justify-content: center;
         align-items: center;
 
         .league-image {
-            width: 100px;
+            height: 10vh;
+            width: 10vh;
         }
     }
 
