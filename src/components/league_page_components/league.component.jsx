@@ -8,6 +8,7 @@ const LeagueComponent = ({ data }) => {
     function navigateToLeagueDetailPage(leagueId) {
         navigate('/leagueDetails', { state: { id: leagueId } });
         localStorage.removeItem("leagueid");
+        localStorage.removeItem("league-scroll-position");
     }
 
     return (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import './table.component.scss';
 
@@ -6,6 +6,31 @@ import './table.component.scss';
 
 const TableComponent = ({ datas, id }) => {
     let navigate = useNavigate();
+    const ref = useRef(null);
+    var div = useRef(0);
+
+    useEffect(() => {
+        const element = ref.current;
+
+        element.addEventListener("scroll", setScrollPostion);
+        const getScrollposition = JSON.parse(localStorage.getItem("league-scroll-position"));
+        if (getScrollposition != null) {
+            div.current = getScrollposition;
+            if (getScrollposition != null) document.getElementById("league-table-div").scrollTop = getScrollposition;
+        }
+
+        return () => {
+            setScrollinCache();
+        }
+    }, [])
+
+    function setScrollinCache() {
+        localStorage.setItem("league-scroll-position", JSON.stringify(div.current));
+    }
+
+    function setScrollPostion() {
+        div.current = (document.getElementById("league-table-div").scrollTop);
+    }
 
     function navToTeamDetailPage(sid, name, logo, leagueid) {
         navigate('/teamDetails', { state: { id: sid, name: name, logo: logo, leagueid: leagueid } });
@@ -13,7 +38,7 @@ const TableComponent = ({ datas, id }) => {
     }
 
     return (
-        <div className="league-table">
+        <div id="league-table-div" ref={ref} className="league-table">
             <table className="league-table-header">
                 <thead>
                     <tr className="league-table-head">
@@ -32,7 +57,7 @@ const TableComponent = ({ datas, id }) => {
                         datas.map((data) => (
                             data.map((sd) => (
                                 <tr className="league-row" key={sd.team.id}
-                                    onClick={() => {navToTeamDetailPage(sd.team.id, sd.team.name, sd.team.logo, id)}}>
+                                    onClick={() => { navToTeamDetailPage(sd.team.id, sd.team.name, sd.team.logo, id) }}>
                                     <td className="team">
                                         <div className="img-txt">
                                             <div><img className="image" src={sd.team.logo} alt="#" /></div>

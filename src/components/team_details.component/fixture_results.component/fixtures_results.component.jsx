@@ -9,7 +9,6 @@ const FixturesResultsComponent = ({ data, team }) => {
         setDate(date.toString().substring(0, 24))
     }, [data.fixture.date])
     
-    console.log(team,data.teams.home.id,team === data.teams.home.id);
     return (<tr className="fixture-row">
         <td className="played-against">
             {team === data.teams.home.id.toString() ? 
