@@ -1,19 +1,23 @@
-.stats-detail {
+.stats-compressed-detail {
     display: flex;
     flex-direction: row;
     background-color: #f1f1f1;
     justify-content: space-evenly;
-    margin: 1rem;
+    text-align: left;
+    margin-bottom: 1rem;
     align-content: center;
     align-items: center;
+    &:hover{
+        scale: (1.1);
+        background-color: lightgreen;
+    }
 }
-
-.stats-row {
+.stats-compressed-row {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
-.collapse-arrow{
+.expand-arrow{
     height: 20px;
     width: 20px;
 }
