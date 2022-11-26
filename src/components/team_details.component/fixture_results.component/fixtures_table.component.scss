@@ -1,8 +1,14 @@
 .fixture-table {
     background-color: white;
     border-collapse: collapse;
+    height: 86vh;
+    position: absolute;
+    overflow: scroll;
 
-    
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
     .fixture-table-head {
         height: 4vh;
         justify-content: center;

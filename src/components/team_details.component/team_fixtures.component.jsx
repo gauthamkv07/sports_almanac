@@ -36,7 +36,7 @@ const TeamFixtures = ({ id, leagueid }) => {
     }, [id, leagueid])
 
     return (<div className="fixtures-list">
-        {datas == null ? <div>hi</div> : <div className="fixtures">
+        {datas == null ? <div>hi</div> : <div>
             <FixturesTableComponent datas={datas} team={team.toString()} />
         </div>}
     </div>)
