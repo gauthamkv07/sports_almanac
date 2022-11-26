@@ -28,8 +28,8 @@ const FixturesTableComponent = ({ datas, team }) => {
         div.current = (document.getElementById("fixtures-tables").scrollTop);
     }
 
-    return (<div id="fixtures-tables" ref={ref} className="fixture-table">
-        <table>
+    return (<div id="fixtures-tables" ref={ref} className="fixtures">
+        <table className="fixture-table">
             <thead>
                 <tr className="fixture-table-head">
                     <th className="played-against">Played against</th>

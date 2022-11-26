@@ -1,6 +1,4 @@
-.fixture-table {
-    background-color: white;
-    border-collapse: collapse;
+.fixtures {
     height: 86vh;
     position: absolute;
     overflow: scroll;
@@ -9,24 +7,29 @@
         display: none;
     }
 
-    .fixture-table-head {
-        height: 4vh;
-        justify-content: center;
-        align-items: center;
+    .fixture-table {
+        background-color: white;
+        border-collapse: collapse;
 
-        .played-against {
-            width: 25vh;
-            text-align: left;
-        }
+        .fixture-table-head {
+            height: 4vh;
+            justify-content: center;
+            align-items: center;
 
-        .score {
-            width: 10vh;
-            text-align: center;
-        }
+            .played-against {
+                width: 25vh;
+                text-align: left;
+            }
 
-        .time {
-            width: 20vh;
-            text-align: center;
+            .score {
+                width: 10vh;
+                text-align: center;
+            }
+
+            .time {
+                width: 20vh;
+                text-align: center;
+            }
         }
     }
 }
