@@ -38,8 +38,8 @@ const PlayerDetailPage = () => {
         <div>{
             datas === null ? <div>Loading...</div> :
                 <div>
-                    <PlayerTitle data={datas[0]}/>
                     <div className="player-detail">
+                        <PlayerTitle data={datas[0]}/>
                         <PlayerDetailsComponent data={datas[0]} />
                         <PlayerStatisticsComponent datas={datas[0].statistics} />
                     </div>

@@ -9,7 +9,7 @@ const PlayerStatisticsComponent = ({ datas }) => {
             {/* <h3><u>STATISTICS</u></h3> */}
             {
                 datas.map((data) => (<div key = {data.league.name}>
-                    {data.games.appearences?<Collapsible datas={data}/>:<p>Player is yet to play a game in {data.league.name}. Stats not available</p>}
+                    {data.games.appearences?<Collapsible datas={data}/>:null}
                 </div>))
             }
         </div>

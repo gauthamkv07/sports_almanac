@@ -5,13 +5,15 @@
     margin-top: 0.5rem;
     margin-left: 2rem;
     margin-right: 2rem;
+    width: 90vh;
 }
 
 .team-logo{
     height: 60px;
     width: 60px;
-    background-color: grey;
     align-items: center;
+    justify-content: center;
+    background-color: grey;
 }
 
 .player-name{

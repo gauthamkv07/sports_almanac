@@ -1,25 +1,24 @@
 .player-detail-component{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: white;
-    width: 30%;
-    margin: 2rem;
+    width: 90vh;
     height: fit-content;
     border-style: solid;
     border-width: 4px;
     border-color: silver;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
 .player-img{
-    margin-top: 2rem;
-    height: 200px;
-    width: 200px;
+    margin: 2rem;
+    height: 150px;
+    width: 150px;
     border-radius: 100;
 }
 
 .text-image{
     display: flex;
-    flex-direction: row;
-    height: 20px;
-    width: 20px;
+    flex-direction: column;
 }
