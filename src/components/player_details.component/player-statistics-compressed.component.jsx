@@ -1,7 +1,6 @@
 import React from "react";
 import Statscompressed from "./stats-compressed.component";
 import './player-statistics.component.scss';
-import Collapsible from "./Collapsible";
 
 const PlayerStatisticsCompressedComponent = ({ datas }) => {
     console.log(datas);
