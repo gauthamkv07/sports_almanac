@@ -6,6 +6,8 @@ const FixturesTableComponent = ({ datas, team }) => {
     const ref = useRef(null);
     var div = useRef(0);
     useEffect(() => {
+        window.onbeforeunload = () => {
+            localStorage.removeItem("fixtures-table-scroll-position");}
         const element = ref.current;
 
         element.addEventListener("scroll", setScrollPostion);
@@ -32,8 +34,9 @@ const FixturesTableComponent = ({ datas, team }) => {
         <table className="fixture-table">
             <thead>
                 <tr className="fixture-table-head">
-                    <th className="played-against">Played against</th>
+                    <th className="played-team">Home</th>
                     <th className="score">Score</th>
+                    <th className="played-team">Away</th>
                     <th className="time">Time</th>
                 </tr>
             </thead>

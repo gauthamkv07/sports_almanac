@@ -35,7 +35,8 @@ const TableComponent = ({ datas, id }) => {
     function navToTeamDetailPage(sid, name, logo, leagueid) {
         navigate('/teamDetails', { state: { id: sid, name: name, logo: logo, leagueid: leagueid } });
         localStorage.removeItem("teamId");
-        localStorage.removeItem("fixtures-table-scroll-position")
+        localStorage.removeItem("fixtures-table-scroll-position");
+        localStorage.removeItem("player-list-scroll-position");
     }
 
     return (

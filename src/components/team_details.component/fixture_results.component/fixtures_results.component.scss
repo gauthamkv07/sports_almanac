@@ -1,5 +1,5 @@
 .fixture-row {
-    height: 5vh;
+    height: 4.25vh;
     justify-content: center;
     align-items: center;
     border-bottom: lightgrey;
@@ -11,9 +11,12 @@
     }
     
 
-    .played-against {
-        width: 80vh;
-        text-align: left;
+    .player-team {
+        height: 4.25vh;
+        width: 30vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .score {
@@ -22,7 +25,7 @@
     }
 
     .time {
-        width: 60vh;
+        width: 20vh;
         text-align: center;
     }
 

@@ -10,7 +10,10 @@ const LeagueDetail = () => {
     const { state } = useLocation();
 
     useEffect(() => {
-        window.onbeforeunload = () => {localStorage.removeItem("leagueid")}
+        window.onbeforeunload = () => {
+            localStorage.removeItem("leagueid");
+            localStorage.removeItem("league-scroll-position");
+        }
         const leagueid = localStorage.getItem("leagueid");
         const localLeagueData = localStorage.getItem("leagueData")
 
