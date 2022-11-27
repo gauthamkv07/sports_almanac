@@ -1,0 +1,28 @@
+.player-title {
+    display: flex;
+    flex-direction: row;
+    background-color: #8082DD;
+    margin-top: 0.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    height: 10vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-title-team-logo {
+    height: 60px;
+    width: 60px;
+    align-items: center;
+    justify-content: center;
+    background-color: #8082DD;
+}
+
+.player-title-name {
+    font-size: x-large;
+    color: white;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    font-weight: bolder;
+}

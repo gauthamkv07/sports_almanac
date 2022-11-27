@@ -1,5 +1,13 @@
-.player-detail {
+.player-page {
+    height: 100vh;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f8fd;
+
+    .player-detail{
+        width: 90vh;
+        height: 90vh;
+        background-color: white;
+    }
 }

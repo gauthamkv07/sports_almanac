@@ -1,6 +1,32 @@
 .player-detail-component{
     display: flex;
+    flex-direction: row;
+    width: 90vh;
+    height: fit-content;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 0.1px solid lightgrey;
+}
+
+.stat-space {
+    font-size: 17px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .header-text {
+        font-weight: 600;
+    }
+}
+
+.player-img{
+    margin: 2rem;
+    height: 150px;
+    width: 150px;
+    border-radius: 100;
+}
+
+.text-image{
+    display: flex;
     flex-direction: column;
-    background-color: olivedrab;
-    width: 35%;
 }

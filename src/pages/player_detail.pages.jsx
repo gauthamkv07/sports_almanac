@@ -4,6 +4,7 @@ import './player_detail.pages.scss';
 import PlayerDetailsComponent from "../components/player_details.component/players-details.component";
 import PlayerStatisticsComponent from "../components/player_details.component/player-statistics.component";
 import apiService from "../service/apiService";
+import PlayerTitle from "../components/player_details.component/player-title.component";
 
 const PlayerDetailPage = () => {
     const { state } = useLocation();
@@ -11,7 +12,6 @@ const PlayerDetailPage = () => {
     const [datas, setData] = useState(null)
 
     useEffect(() => {
-        window.onbeforeunload = () => {localStorage.removeItem("playerId")}
         const storedData = localStorage.getItem("playerData");
         const playerId = localStorage.getItem("playerId");
         const fetchData = async () => {
@@ -38,9 +38,12 @@ const PlayerDetailPage = () => {
         <div>{
             datas === null ? <div>Loading...</div> :
                 <div>
-                    <div className="player-detail">
-                        <PlayerDetailsComponent data={datas[0]} />
-                        <PlayerStatisticsComponent datas={datas[0].statistics} />
+                    <div className="player-page">
+                        <PlayerTitle data={datas[0]} />
+                        <div className="player-detail">
+                            <PlayerDetailsComponent data={datas[0]} />
+                            <PlayerStatisticsComponent datas={datas[0].statistics} />
+                        </div>
                     </div>
                 </div>
         }</div>
