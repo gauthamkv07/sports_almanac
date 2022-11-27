@@ -1,19 +1,41 @@
 .stats-detail {
     display: flex;
     flex-direction: row;
-    background-color: #f1f1f1;
-    justify-content: space-evenly;
-    margin: 1rem;
+    border-bottom: 0.1px solid lightgrey;
     align-content: center;
     align-items: center;
+
+    .arrow-space {
+        width: 7vh;
+    
+        .collapse-arrow{
+            height: 20px;
+            width: 20px;
+        }
+    }
+}
+
+.stats-league-name {
+    width: 15vh;
+    display: flex;
+    align-items: flex-start;
 }
 
 .stats-row {
+    height: 12vh;
     display: flex;
     flex-direction: column;
-}
+    justify-content: space-evenly;
+    align-items: flex-start;
+    width: 24.5vh;
 
-.collapse-arrow{
-    height: 20px;
-    width: 20px;
+    .stat-space {
+        font-size: 17px;
+        display: flex;
+        align-items: flex-start;
+
+        .header-text {
+            font-weight: 600;
+        }
+    }
 }
