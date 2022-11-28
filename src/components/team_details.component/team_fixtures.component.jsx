@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import './team_fixtures.component.scss';
 import FixturesTableComponent from "./fixture_results.component/fixtures_table.component";
 import apiService from "../../service/apiService";
+import Loader from "../loader.component/loader.component";
 
 const TeamFixtures = ({ id, leagueid }) => {
     const [team, setTeam] = useState(null)
@@ -36,7 +37,7 @@ const TeamFixtures = ({ id, leagueid }) => {
     }, [id, leagueid])
 
     return (<div className="fixtures-list">
-        {datas == null ? <div>hi</div> : <div>
+        {datas == null ? <div className="loader-space"><Loader /></div> : <div>
             <FixturesTableComponent datas={datas} team={team.toString()} />
         </div>}
     </div>)
