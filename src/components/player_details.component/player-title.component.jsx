@@ -1,6 +1,5 @@
 import React from "react";
-import './player-title.component.scss'
-import PlayerDetailRow from "./player-detail-row.component";
+import './player-title.component.scss';
 import Title from "../title.component/title.component";
 
 const PlayerTitle = ({data}) => {
