@@ -15,6 +15,7 @@
             height: 4vh;
             justify-content: center;
             align-items: center;
+            font-size: 13px;
 
             .team {
                 width: 50vh;
@@ -41,6 +42,7 @@
     border-bottom-style: solid ;
     border-width: 0.1px;
     width: 90vh;
+    font-size: 12px;
 
     &:hover {
         background-color: #f8f8fd;
@@ -54,10 +56,10 @@
         text-align: left;
 
         .image {
-            height:25px;
-            width: 25px;
+            height:20px;
+            width: 20px;
             align-items: center;
-            margin-right: 1rem;
+            margin-right: 0.5rem;
         }
     }
 
