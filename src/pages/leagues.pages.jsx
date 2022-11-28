@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import './leagues.pages.scss';
 import LeagueListComponent from "../components/league_page_components/leageuelist.component";
 import apiService from "../service/apiService";
+import Title from "../components/title.component/title.component";
+import Loader from "../components/loader.component/loader.component";
 
 const Leagues = () => {
     const [datas, setData] = useState([])
@@ -29,10 +31,14 @@ const Leagues = () => {
     }, [])
 
     return (
-        <div className="leagues-container">
-            <div className="leagues-title">Sports Almanac</div>
-            {datas == null ? <div>Loading...</div> : <div className="league-tile-conatiner"><LeagueListComponent datas={datas} /></div>}
+        <div>
+            <Title/>
+            <div className="leagues-container">
+                {/* <div className="leagues-title">Sports Almanac</div> */}
+                {datas == null ? <div><Loader/></div> : <div className="league-tile-conatiner"><LeagueListComponent datas={datas} /></div>}
+            </div>
         </div>
+
     )
 
 }

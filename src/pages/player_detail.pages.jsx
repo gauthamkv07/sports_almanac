@@ -5,6 +5,7 @@ import PlayerDetailsComponent from "../components/player_details.component/playe
 import PlayerStatisticsComponent from "../components/player_details.component/player-statistics.component";
 import apiService from "../service/apiService";
 import PlayerTitle from "../components/player_details.component/player-title.component";
+import Loader from "../components/loader.component/loader.component";
 
 const PlayerDetailPage = () => {
     const { state } = useLocation();
@@ -36,10 +37,10 @@ const PlayerDetailPage = () => {
 
     return (
         <div>{
-            datas === null ? <div>Loading...</div> :
+            datas === null ? <div><Loader/></div> :
                 <div>
+                    <PlayerTitle data={datas[0]} />
                     <div className="player-page">
-                        <PlayerTitle data={datas[0]} />
                         <div className="player-detail">
                             <PlayerDetailsComponent data={datas[0]} />
                             <PlayerStatisticsComponent datas={datas[0].statistics} />

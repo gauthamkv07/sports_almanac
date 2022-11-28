@@ -6,6 +6,7 @@ import PlayerListComponent from "../components/team_details.component/player_lis
 import TeamFixtures from "../components/team_details.component/team_fixtures.component";
 import apiService from "../service/apiService";
 import StatusBar from "../components/team_details.component/status_bars.component/status_bars.component";
+import Loader from "../components/loader.component/loader.component";
 
 const TeamDetailPage = () => {
     const [teamData, setTeamData] = useState(null)
@@ -54,7 +55,7 @@ const TeamDetailPage = () => {
                 <StatusBar status={status} handleClick={updateStatus} />
             </div>
             <div className="team-data">
-                {teamData == null ? <div>Loading...</div> :
+                {teamData == null ? <div><Loader/></div> :
                     <div className="team-align">
                         {
                             {

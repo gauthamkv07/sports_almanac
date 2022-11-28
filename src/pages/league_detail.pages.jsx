@@ -4,6 +4,7 @@ import { useLocation } from 'react-router-dom';
 import LogoComponent from "../components/league_details.component/logo.component";
 import TableComponent from "../components/league_details.component/table.component";
 import apiService from "../service/apiService";
+import Loader from "../components/loader.component/loader.component";
 
 const LeagueDetail = () => {
     const [leagueData, setLeagueData] = useState(null)
@@ -38,11 +39,14 @@ const LeagueDetail = () => {
     }, [state.id])
 
     return <div>{
-        leagueData == null ? <div>loading</div> :
-            <div className="league-detail">
-                    <LogoComponent data={leagueData} />
-                    <TableComponent className="points-table" datas={leagueData.league.standings} id={state.id} />
-            </div>}</div>
+        leagueData == null ? <div><Loader/></div> :
+            <div>
+                <LogoComponent data={leagueData} />
+                <div className="league-detail">
+                        <TableComponent className="points-table" datas={leagueData.league.standings} id={state.id} />
+                </div>
+            </div>
+            }</div>
 
 }
 
