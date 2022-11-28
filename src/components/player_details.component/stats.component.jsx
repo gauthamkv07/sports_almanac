@@ -7,7 +7,7 @@ const Stats = ({ data }) => {
         <div>
             <div className="stats-detail">
                 <div className="arrow-space"><img className="collapse-arrow" src={collapseArrow} alt="logo" /></div>
-                <h3 className="stats-league-name">{data.league.name}</h3>
+                <div className="stats-league-name">{data.league.name}</div>
                 <div className="stats-row">
                     <div className="stat-space"><div className="header-text">Appearances:&nbsp;</div>{data.games.appearences ? data.games.appearences : 0}</div>
                     <div className="stat-space"><div className="header-text">Starting:&nbsp;</div>{data.games.lineups ? data.games.lineups : 0}</div>

@@ -40,10 +40,10 @@ const LeagueDetail = () => {
 
     return <div>{
         leagueData == null ? <div><Loader/></div> :
-            <div>
+            <div className="league-detail-page">
                 <LogoComponent data={leagueData} />
                 <div className="league-detail">
-                        <TableComponent className="points-table" datas={leagueData.league.standings} id={state.id} />
+                        <TableComponent datas={leagueData.league.standings} id={state.id} />
                 </div>
             </div>
             }</div>

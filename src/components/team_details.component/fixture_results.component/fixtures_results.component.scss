@@ -2,9 +2,12 @@
     height: 4.25vh;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: row;
     border-bottom: lightgrey;
     border-bottom-style: solid ;
     border-width: 0.1px;
+    font-size: 12px;
 
     &:hover {
         background-color: #f8f8fd;
@@ -13,18 +16,34 @@
 
     .player-team {
         height: 4.25vh;
-        width: 30vh;
+        width: 27vh;
         display: flex;
         justify-content: left;
         align-items: center;
+        margin-left: 0.5rem;
+
+        .team-image {
+            height:20px;
+            width: 20px;
+            align-items: center;
+            margin-right: 0.5rem;
+        }
     }
 
     .player-away-team {
         height: 4.25vh;
-        width: 30vh;
+        width: 27vh;
         display: flex;
-        justify-content: left;
+        justify-content: right;
         align-items: center;
+        margin-right: 0.5rem;
+
+        .team-image {
+            height:20px;
+            width: 20px;
+            align-items: center;
+            margin-left: 0.5rem;
+        }
     }
 
     .score {
@@ -33,7 +52,11 @@
     }
 
     .time {
-        width: 20vh;
+        width: 26vh;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
         text-align: center;
     }
 

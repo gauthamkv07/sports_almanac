@@ -3,19 +3,18 @@ import PlayerDetailRow from "./player-detail-row.component";
 import './players-details.component.scss';
 
 const PlayerDetailsComponent = ({ data }) => {
-    console.log(data);
     return (
         <div className="player-detail-component">
             <div>
-                <img className="player-img" src={data.player.photo} alt="#"/>
+                <img className="player-img" src={data.player.photo} alt="#" />
             </div>
             <div className="text-image">
-                <PlayerDetailRow><p>Full Name:{data.player.firstname}{" "}{data.player.lastname}</p></PlayerDetailRow>
-                <PlayerDetailRow><p>Nationality: {data.player.nationality}</p></PlayerDetailRow>
-                <PlayerDetailRow><p>Age: {data.player.age}</p></PlayerDetailRow>
-                <PlayerDetailRow><p>Club:{data.statistics[0].team.name}</p></PlayerDetailRow>
-                <PlayerDetailRow><p>Position: {data.statistics[0].games.position}</p></PlayerDetailRow>
-                <PlayerDetailRow><p>Date of Birth: {data.player.birth.date}</p></PlayerDetailRow>
+                <PlayerDetailRow><div className="header-text">Full Name:&nbsp;</div>{data.player.firstname}{" "}{data.player.lastname}</PlayerDetailRow>
+                <PlayerDetailRow><div className="header-text">Nationality:&nbsp;</div>{data.player.nationality}</PlayerDetailRow>
+                <PlayerDetailRow><div className="header-text">Age:&nbsp;</div>{data.player.age}</PlayerDetailRow>
+                <PlayerDetailRow><div className="header-text">Club:&nbsp;</div>{data.statistics[0].team.name}</PlayerDetailRow>
+                <PlayerDetailRow><div className="header-text">Position:&nbsp;</div>{data.statistics[0].games.position}</PlayerDetailRow>
+                <PlayerDetailRow><div className="header-text">Date of Birth:&nbsp;</div>{data.player.birth.date}</PlayerDetailRow>
             </div>
         </div>
     )

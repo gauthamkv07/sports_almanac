@@ -6,6 +6,8 @@
     align-content: left;
     align-items: center;
     justify-content: space-around;
+    height: 5vh;
+    cursor: pointer;
 
     &:hover {
         background-color: #f8f8fd;
@@ -17,6 +19,7 @@
     }
 
     .arrow-space {
+        margin-top: 4px;
         width: 7vh;
 
         .expand-arrow {
@@ -29,10 +32,13 @@
         width: 15vh;
         display: flex;
         align-items: flex-start;
+        font-size: 12px;
+        font-weight: 600;
+        text-align: left;
     }
 
     .stat-space {
-        font-size: 16px;
+        font-size: 12px;
         width: 24.5vh;
         display: flex;
         align-items: flex-start;

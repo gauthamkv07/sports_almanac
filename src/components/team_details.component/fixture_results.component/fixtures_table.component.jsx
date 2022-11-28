@@ -34,10 +34,10 @@ const FixturesTableComponent = ({ datas, team }) => {
         <table className="fixture-table">
             <thead>
                 <tr className="fixture-table-head">
-                    <th className="played-team">Home</th>
-                    <th className="score">Score</th>
-                    <th className="played-team">Away</th>
-                    <th className="time">Time</th>
+                    <div className="played-team">Home</div>
+                    <div className="score">Score</div>
+                    <div className="played-away-team">Away</div>
+                    <div className="time">Time</div>
                 </tr>
             </thead>
             <tbody>

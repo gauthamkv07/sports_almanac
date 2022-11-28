@@ -1,4 +1,5 @@
 .league-table {
+    height: 90vh;
     background-color: white;
     overflow: scroll;
 
@@ -12,7 +13,7 @@
         .league-table-head {
             display: flex;
             flex-direction: row;
-            height: 4vh;
+            height: 4.25vh;
             justify-content: center;
             align-items: center;
             font-size: 13px;
