@@ -37,11 +37,12 @@ const FixturesTableComponent = ({ datas, team }) => {
                     <div className="played-team">Home</div>
                     <div className="score">Score</div>
                     <div className="played-away-team">Away</div>
-                    <div className="time">Time</div>
+                    <div className="time">Start time</div>
                 </tr>
             </thead>
             <tbody>
                 {datas.filter((data) => data.fixture.status.long === "Match Finished").map((data) => (<FixturesResultsComponent key={data.fixture.id} data={data} team={team.toString()} />))}
+                <tr className="empty-space"></tr>
             </tbody>
         </table>
     </div>)

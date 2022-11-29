@@ -36,15 +36,16 @@ const PlayerListComponent = ({ datas }) => {
         localStorage.removeItem("playerId");
     }
 
-    return (<div id ="player-list" ref = {ref} className="player-detail-container">
-        {
+    return (<div id ="player-list" ref = {ref} className="player-detail">
+        <div className="player-detail-container">{
             datas.map((data) => (
                 <div key={data.player.id} className="player-div" onClick={() => { navigateToPlayerDetailPage(data.player.id) }}>
                     <div className="player-image-holder"><img className="player-image" src={data.player.photo} alt="#" /></div>
                     <div className="player-name">{data.player.firstname}{" "}{data.player.lastname}</div>
                 </div>
             ))
-        }
+        }</div>
+        <div className="empty-space"></div>
     </div>)
 }
 

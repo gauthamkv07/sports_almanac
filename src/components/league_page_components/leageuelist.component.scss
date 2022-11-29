@@ -1,14 +1,23 @@
-.leagues-tiles {
+.league-titles-container {
     height: 90vh;
     width: 90vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     overflow: scroll;
+    background-color: white;
 
     &::-webkit-scrollbar {
         display: none;
+    }
+
+    .leagues-tiles {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .empty-space {
+        height: 5vh;
+
     }
 }

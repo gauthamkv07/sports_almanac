@@ -1,58 +1,67 @@
-.player-detail-container {
+.player-detail {
     background-color: white;
     height: 87vh;
     width: 90vh;
-    padding: 1vh;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
     overflow: scroll;
 
     &::-webkit-scrollbar {
         display: none;
     }
 
-    .player-div {
-        height: 210px;
-        width: 16.3vh;
-        margin: 5px 5px;
-        border: 1px solid lightgrey;
-        border-radius: 10px;
+    .empty-space {
+        height: 5vh;
+    }
+
+    .player-detail-container {
+
+        padding: 1vh;
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        cursor: pointer;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
 
-        &:hover{
-            background-color: #e1dbf8;
-        }
 
-        .player-image-holder {
-            height: 170px;
+        .player-div {
+            height: 210px;
             width: 16.3vh;
+            margin: 5px 5px;
+            border: 1px solid lightgrey;
+            border-radius: 10px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            cursor: pointer;
 
-            .player-image {
-                border-top-left-radius: 10px;
-                border-top-right-radius: 10px;
+            &:hover {
+                background-color: #e1dbf8;
+            }
+
+            .player-image-holder {
                 height: 170px;
                 width: 16.3vh;
-            }
-        }
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
-        .player-name {
-            height: 40px;
-            display: flex;
-            padding: 5px;
-            justify-content: center;
-            align-items: left;
-            text-align: left;
-            font-weight: 500;
-            font-size: 10px;
-            color: black;
+                .player-image {
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    height: 170px;
+                    width: 16.3vh;
+                }
+            }
+
+            .player-name {
+                height: 40px;
+                display: flex;
+                padding: 5px;
+                justify-content: center;
+                align-items: left;
+                text-align: left;
+                font-weight: 500;
+                font-size: 10px;
+                color: black;
+            }
         }
     }
 }
