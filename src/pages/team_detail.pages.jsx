@@ -6,7 +6,6 @@ import PlayerListComponent from "../components/team_details.component/player_lis
 import TeamFixtures from "../components/team_details.component/team_fixtures.component";
 import apiService from "../service/apiService";
 import StatusBar from "../components/team_details.component/status_bars.component/status_bars.component";
-import Loader from "../components/loader.component/loader.component";
 
 const TeamDetailPage = () => {
     const [teamData, setTeamData] = useState(null)
@@ -15,7 +14,7 @@ const TeamDetailPage = () => {
 
     useEffect(() => {
         window.onbeforeunload = () => {
-            setTeamData(null); 
+            setTeamData(null);
             fetchData();
         }
         const localTeamData = localStorage.getItem("teamData");
@@ -54,8 +53,8 @@ const TeamDetailPage = () => {
                 <TeamLogo logo={state.logo} name={state.name} />
                 <StatusBar status={status} handleClick={updateStatus} />
             </div>
-            <div className="team-data">
-                {teamData == null ? <div><Loader/></div> :
+            {teamData == null ? <div className="loader-space"><div className="loader"></div></div> :
+                <div className="team-data">
                     <div className="team-align">
                         {
                             {
@@ -66,8 +65,8 @@ const TeamDetailPage = () => {
                             }[status]
                         }
                     </div>
-                }
-            </div>
+                </div>
+            }
         </div>
     )
 }

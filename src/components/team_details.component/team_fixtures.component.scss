@@ -5,11 +5,11 @@
     position: relative;
     display: flex;
     justify-content: flex-start;
-}
 
-.loader-space {
-    height: 100vh;
-    width: 90vh;
-    align-items: center;
-    background-color: white;
+    .loader-space {
+        height: 86vh;
+        width: 90vh;
+        align-items: center;
+        background-color: white;
+    }
 }

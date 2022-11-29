@@ -31,9 +31,9 @@ const Leagues = () => {
     }, [])
 
     return (
-        <div>
-            <Title/>
-            <div className="leagues-container">
+        <div className="leagues-container">
+            <Title show = "" page_title = "SPORTS ALMANAC"/>
+            <div>
                 {/* <div className="leagues-title">Sports Almanac</div> */}
                 {datas == null ? <div><Loader/></div> : <div className="league-tile-conatiner"><LeagueListComponent datas={datas} /></div>}
             </div>

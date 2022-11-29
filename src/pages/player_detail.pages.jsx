@@ -37,7 +37,7 @@ const PlayerDetailPage = () => {
 
     return (
         <div>{
-            datas === null ? <div><Loader/></div> :
+            datas === null ? <div className="loader-space"><Loader/></div> :
                 <div>
                     <PlayerTitle data={datas[0]} />
                     <div className="player-page">

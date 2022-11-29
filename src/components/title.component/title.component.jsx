@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import './title.component.scss'
 
-const Title = ({logo,page_title}) =>{
+const Title = ({show,logo,page_title}) =>{
     return(
         <div className="title">
-            <div className="title-website-name">
-                <div><Link to="/" style={{textDecoration:'none', color:'white'}}>SPORTS ALMANAC</Link></div>
-            </div>
+            {show == null ? <div className="title-website-name">
+                <Link to="/" style={{textDecoration:'none', color:'white'}}>SPORTS ALMANAC</Link>
+            </div>: null}
             {(logo == null )?null:
                 <img className="title-logo-image" src={logo} alt="#"/>
             }
