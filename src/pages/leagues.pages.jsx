@@ -32,7 +32,7 @@ const Leagues = () => {
 
     return (
         <div className="leagues-container">
-            <Title show = "" page_title = "SPORTS ALMANAC"/>
+            <Title show = "" page_title = "SPORTS ALMANAC 2022"/>
             <div>
                 {/* <div className="leagues-title">Sports Almanac</div> */}
                 {datas == null ? <div><Loader/></div> : <div className="league-tile-conatiner"><LeagueListComponent datas={datas} /></div>}
