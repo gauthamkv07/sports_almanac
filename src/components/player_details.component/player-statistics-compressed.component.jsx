@@ -3,7 +3,6 @@ import Statscompressed from "./stats-compressed.component";
 import './player-statistics.component.scss';
 
 const PlayerStatisticsCompressedComponent = ({ datas }) => {
-    console.log(datas);
     return (
         <div className="player-compressed-stat">
             <h3><u>Statistics</u></h3>

@@ -8,7 +8,6 @@ const PlayerStatisticsComponent = ({ datas }) => {
 
     useEffect(() => {
         setShowNoStats(!datas.some((data)=> data.games.appearences));
-        console.log(showNoStats);
     },[showNoStats, datas]);
 
     return (
