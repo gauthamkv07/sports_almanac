@@ -21,8 +21,8 @@
 
 
         .player-div {
-            height: 210px;
-            width: 15.3vh;
+            height: 25vh;
+            width: 20vh;
             margin: 5px 5px;
             border: 1px solid lightgrey;
             border-radius: 10px;
@@ -36,8 +36,8 @@
             }
 
             .player-image-holder {
-                height: 170px;
-                width: 15.3vh;
+                height: 20vh;
+                width: 20vh;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -46,7 +46,7 @@
                     border-top-left-radius: 10px;
                     border-top-right-radius: 10px;
                     height: 170px;
-                    width: 15.3vh;
+                    width: 20vh;
                 }
             }
 

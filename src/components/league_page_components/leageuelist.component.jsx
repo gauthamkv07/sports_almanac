@@ -5,9 +5,8 @@ import LeagueComponent from "./league.component";
 const LeagueListComponent = ({ datas }) => {
 
     const list = new Set(["Premier League", "Championship", "National League", "League One", "League Two",
-        "FA WSL", "National League - North", "National League - South", "Non League Div One - Isthmian North",
-        "Non League Div One - Isthmian South Central", "Non League Div One - Northern West",
-        "Non League Div One - Northern Midlands"])
+        "National League - North", "National League - South", "Non League Div One - Isthmian North",
+        "Non League Div One - Isthmian South Central"])
 
     return (<div className='league-titles-container'>
         <div className="leagues-tiles">
